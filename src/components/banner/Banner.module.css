@@ -2,6 +2,7 @@
   position: relative;
   object-fit: contain;
   height: 450px;
+  min-width: 450px;
 }
 
 .bannerContent {
@@ -27,10 +28,11 @@
 .description {
   width: 30rem;
   line-height: 1.2rem;
-  max-width: 300px;
+  max-width: 400px;
   font-size: 1.2rem;
   margin-top: 10px;
   margin-left: 3px;
+  height: 150px;
 }
 
 .button {

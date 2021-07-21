@@ -1,8 +1,10 @@
 import React from 'react';
 import Button from '../../lib/button/Button';
 import styles from './Banner.module.css';
+import { truncate } from '../../lib/truncate/truncate';
 
 function Banner() {
+
     return (
         <header
             style={{
@@ -20,7 +22,26 @@ function Banner() {
                     <Button className={`${styles.button}`} title={"My List"} />
                 </div>
                 <div className={styles.description}>
+                    {truncate(`this is the descriptionthis is the descriptionthis is the description
                     this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description
+                    this is the description`, 150)}
+
                 </div>
             </div>
             <div className={styles.fadeBottom} />
