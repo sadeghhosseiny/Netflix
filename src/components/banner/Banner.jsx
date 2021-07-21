@@ -1,46 +1,56 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '../../lib/button/Button';
 import styles from './Banner.module.css';
 import { truncate } from '../../lib/truncate/truncate';
+import axios from '../../services/axios/axios';
+import requests from '../../services/requests/requests';
 
 function Banner() {
+
+    const [originalMovie, setOriginalMovie] = useState([]);
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const req = await axios.get(requests.fetchNetflixOriginal);
+            setOriginalMovie(req.data.results[
+                Math.floor(Math.random() * req.data.results.length - 1)
+            ]
+            );
+            //return req;
+        };
+        fetchData();
+    }, []);
+
+
+    console.log("movies, ", originalMovie);
+
+    const DataUndefinedHandler = async () => {
+        const req = await axios.get(requests.fetchNetflixOriginal);
+        setOriginalMovie(req.data.results[
+            Math.floor(Math.random() * req.data.results.length - 1)
+        ]
+        );
+
+    };
 
     return (
         <header
             style={{
-                backgroundSize: "cover",
-                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png)`,
-                backgroundPosition: "center center"
+                backgroundImage:
+                    `url(https://image.tmdb.org/t/p/original${(originalMovie === undefined || originalMovie.backdrop_path === null) ? DataUndefinedHandler() : originalMovie?.backdrop_path})`,
             }}
             className={styles.header}>
 
             <div className={styles.bannerContent}>
-                <h1 className={styles.bannerTitle}>Movie Name</h1>
+                <h1 className={styles.bannerTitle}>{originalMovie?.name}</h1>
                 <div className={styles.buttonsDiv}>
 
                     <Button className={`${styles.button}`} title={"Play"} />
                     <Button className={`${styles.button}`} title={"My List"} />
                 </div>
                 <div className={styles.description}>
-                    {truncate(`this is the descriptionthis is the descriptionthis is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description
-                    this is the description`, 150)}
+                    {truncate(`${originalMovie?.overview}`, 150)}
 
                 </div>
             </div>

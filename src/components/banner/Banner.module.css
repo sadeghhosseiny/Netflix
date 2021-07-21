@@ -1,14 +1,19 @@
 .header {
   position: relative;
   object-fit: contain;
-  height: 450px;
+  width: 100%;
+  height: 600px;
   min-width: 450px;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
 }
 
 .bannerContent {
   height: 200px;
-  width: 400px;
-  max-width: 400px;
+  width: 460px;
+  max-width: 450px;
   margin-left: 40px;
   padding-top: 140px;
   color: white;
@@ -55,11 +60,12 @@
 }
 
 .fadeBottom {
-  height: 6.9rem;
+  height: 8.1rem;
   background-image: linear-gradient(
     180deg,
     transparent,
     rgb(66 63 63 / 61%),
     #424040
   );
+  margin-top: 131px;
 }
