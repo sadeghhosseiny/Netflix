@@ -1,0 +1,63 @@
+.header {
+  position: relative;
+  object-fit: contain;
+  height: 450px;
+}
+
+.bannerContent {
+  height: 200px;
+  width: 400px;
+  max-width: 400px;
+  margin-left: 40px;
+  padding-top: 140px;
+  color: white;
+}
+
+.bannerTitle {
+  color: white;
+  font-size: 3rem;
+  font-weight: 100px;
+}
+
+.buttonsDiv {
+  margin-left: 3px;
+  margin-top: 10px;
+}
+
+.description {
+  width: 30rem;
+  line-height: 1.2rem;
+  max-width: 300px;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+.button {
+  outline: none;
+  border: none;
+  margin-right: 15px;
+  cursor: pointer;
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.51);
+  padding: 10px 40px;
+  border-radius: 4px;
+  font-size: large;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+}
+
+.fadeBottom {
+  height: 6.9rem;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgb(66 63 63 / 61%),
+    #424040
+  );
+}
