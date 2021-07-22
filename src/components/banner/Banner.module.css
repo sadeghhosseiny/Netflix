@@ -2,7 +2,7 @@
   position: relative;
   object-fit: contain;
   width: 100%;
-  height: 600px;
+  height: 820px;
   min-width: 450px;
   background-attachment: fixed;
   background-position-x: center;
@@ -11,11 +11,12 @@
 }
 
 .bannerContent {
-  height: 200px;
-  width: 460px;
-  max-width: 450px;
-  margin-left: 40px;
-  padding-top: 140px;
+  height: -webkit-fill-available;
+  width: 600px;
+  max-width: 550px;
+  padding-left: 40px;
+  padding-top: 250px;
+  background-image: linear-gradient(90deg, black, #00000003);
   color: white;
 }
 
@@ -60,12 +61,12 @@
 }
 
 .fadeBottom {
-  height: 8.1rem;
+  height: 6.1rem;
   background-image: linear-gradient(
     180deg,
     transparent,
-    rgb(66 63 63 / 61%),
-    #424040
+    rgb(4 4 4 / 61%),
+    #131212
   );
-  margin-top: 131px;
+  margin-top: -98px;
 }
