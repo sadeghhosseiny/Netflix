@@ -1,0 +1,20 @@
+.movieContainer {
+  padding-left: 40px;
+  background-color: #111;
+  color: #fff;
+}
+
+.movies {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.movies::-webkit-scrollbar {
+  display: none;
+}
+
+.movieImage {
+  max-height: 150px;
+}
