@@ -19,9 +19,21 @@
 .largeRow {
   max-height: 250px;
   margin-right: 15px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.largeRow:hover {
+  transform: scale(1.15);
 }
 
 .movieImage {
   max-height: 150px;
   margin-right: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.movieImage:hover {
+  transform: scale(1.1);
 }

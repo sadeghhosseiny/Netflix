@@ -6,7 +6,7 @@ import requests from '../../services/requests/requests';
 
 function HomePage() {
     return (
-        <div>
+        <>
             <Navbar />
             <Banner />
             <MovieRow LargeRow title={"Netflix Original"} fetchUrl={requests.fetchNetflixOriginal} />
@@ -17,7 +17,7 @@ function HomePage() {
             <MovieRow title={"Horror Movies"} fetchUrl={requests.fetchHorrorMovies} />
             <MovieRow title={"Romance Movies"} fetchUrl={requests.fetchRomanceMovies} />
             <MovieRow title={"Documentaries"} fetchUrl={requests.fetchDocumentaries} />
-        </div>
+        </>
     );
 }
 
