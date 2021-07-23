@@ -7,10 +7,10 @@ import styles from './SignUp.module.css';
 
 function SignUp() {
 
-    const [isSignUp, setIsSignUp] = useState(false);
+    const [isSignIn, setIsSignIn] = useState(false);
     //const history = useHistory();
     const handleLogin = () => {
-        setIsSignUp(true);
+        setIsSignIn(true);
     };
 
     return (
@@ -19,12 +19,12 @@ function SignUp() {
             <div className={styles.signupScreen}>
                 <div>
                     <img className={styles.signupNavbarLogo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="" />
-                    <Button onClick={handleLogin} className={styles.signupNavbarBtn} title={"Sign In"} />
+                    <Button onClick={handleLogin} className={isSignIn ? styles.alreadyLogin : styles.signupNavbarBtn} title={"Sign In"} />
                 </div>
-                <div className={styles.signupScreen_gradient} />
+                <div className={isSignIn ? styles.signinScreen_gradient : styles.signupScreen_gradient} />
 
-                <div className={styles.signupScreen_body}>
-                    {isSignUp ? (<Login />) : (
+                <div className={isSignIn ? styles.signinScreen_body : styles.signupScreen_body}>
+                    {isSignIn ? (<Login />) : (
                         <>
                             <h1>Unlimited movies, TV shows, and more.</h1>
                             <h2>Watch anywhere. Cancel anytime.</h2>
@@ -35,7 +35,6 @@ function SignUp() {
                                     {/* <button className={styles.signupBtn}>Get Started</button> */}
                                     <Input className={styles.signupInput} type="email" placeholder="Email address" />
                                     <Button className={styles.signupBtn} title={"Get Started"} />
-                                    {console.log(isSignUp)}
                                 </form>
                             </div>
                         </>
