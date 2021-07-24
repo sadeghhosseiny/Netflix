@@ -58,3 +58,14 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+@media (max-width: 740px) {
+  .loginBody {
+    width: 100%;
+    max-width: -webkit-fill-available;
+    background: rgb(18, 19, 19);
+    height: -webkit-fill-available;
+    border-radius: 0;
+    padding: 100px 30px;
+  }
+}
