@@ -1,16 +1,34 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Button from '../../lib/button/Button';
 import Input from '../../lib/input/input';
 import Login from '../Login/Login';
 import styles from './SignUp.module.css';
+import { setUser } from '../../Redux/actions/actions';
 
 function SignUp() {
-
+    const dispatch = useDispatch();
+    const [userEmail, setUserEmail] = useState("");
     const [isSignIn, setIsSignIn] = useState(false);
-    //const history = useHistory();
+
     const handleLogin = () => {
         setIsSignIn(true);
+    };
+
+    const handleSetUser = (e) => {
+        setUserEmail(e.target.value);
+    };
+
+    const handleLoginUser = () => {
+        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.com/i.userEmail) {
+
+            dispatch(setUser(userEmail));
+        }
+        else {
+            alert("asdg");
+        }
+
+
     };
 
     return (
@@ -24,7 +42,7 @@ function SignUp() {
                 <div className={isSignIn ? styles.signinScreen_gradient : styles.signupScreen_gradient} />
 
                 <div className={isSignIn ? styles.signinScreen_body : styles.signupScreen_body}>
-                    {isSignIn ? (<Login />) : (
+                    {isSignIn ? (<Login setLogin={setIsSignIn} />) : (
                         <>
                             <h1>Unlimited movies, TV shows, and more.</h1>
                             <h2>Watch anywhere. Cancel anytime.</h2>
@@ -33,8 +51,8 @@ function SignUp() {
                                 <form>
                                     {/* <input className={styles.signupInput} type="email" placeholder="Email Address" /> */}
                                     {/* <button className={styles.signupBtn}>Get Started</button> */}
-                                    <Input className={styles.signupInput} type="email" placeholder="Email address" />
-                                    <Button className={styles.signupBtn} title={"Get Started"} />
+                                    <Input onChange={handleSetUser} className={styles.signupInput} type="email" placeholder="Email address" />
+                                    <Button type="submit" onClick={handleLoginUser} className={styles.signupBtn} title={"Get Started"} />
                                 </form>
                             </div>
                         </>
