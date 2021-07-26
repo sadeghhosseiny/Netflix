@@ -3,7 +3,9 @@ import { Type } from "../action types/actionTypes";
 const initialState = {
     user: [],
     saveData: [],
-    movieList: []
+    movieList: [],
+    allMovies: [],
+    moviePage: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -18,6 +20,16 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 movieList: [...state.movieList, action.payload]
+            };
+        case Type.ADD_MOVIE_TO_BASKET:
+            return {
+                ...state,
+                allMovies: action.payload
+            };
+        case Type.MOVIE_PAGE:
+            return {
+                ...state,
+                moviePage: action.payload
             };
 
         default:

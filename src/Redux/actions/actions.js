@@ -13,3 +13,17 @@ export const addToMyList = (movie) => {
         payload: movie
     };
 };
+
+export const addMovieToBaket = (movies) => {
+    return {
+        type: Type.ADD_MOVIE_TO_BASKET,
+        payload: movies
+    };
+};
+
+export const moviePage = (movieInfo) => {
+    return {
+        type: Type.MOVIE_PAGE,
+        payload: movieInfo
+    };
+};

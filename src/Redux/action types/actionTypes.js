@@ -1,4 +1,6 @@
 export const Type = {
     USER: "USER",
-    ADD_TO_MY_LIST: "ADD_TO_MY_LIST"
+    ADD_TO_MY_LIST: "ADD_TO_MY_LIST",
+    ADD_MOVIE_TO_BASKET: "ADD_MOVIE_TO_BASKET",
+    MOVIE_PAGE: "MOVIE_PAGE"
 }
