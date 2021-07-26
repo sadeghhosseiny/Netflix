@@ -9,21 +9,19 @@ function Banner() {
 
     const [originalMovie, setOriginalMovie] = useState([]);
 
+    const fetchData = async () => {
+        const req = await axios.get(requests.fetchNetflixOriginal);
+        setOriginalMovie(req.data.results[
+            Math.floor(Math.random() * req.data.results.length - 1)
+        ]
+        );
+    };
 
     useEffect(() => {
-        const fetchData = async () => {
-            const req = await axios.get(requests.fetchNetflixOriginal);
-            setOriginalMovie(req.data.results[
-                Math.floor(Math.random() * req.data.results.length - 1)
-            ]
-            );
-            //return req;
-        };
+        //return req;
         fetchData();
     }, []);
 
-
-    console.log("movies, ", originalMovie);
 
     const DataUndefinedHandler = async () => {
         const req = await axios.get(requests.fetchNetflixOriginal);
@@ -33,6 +31,8 @@ function Banner() {
         );
 
     };
+
+    console.log(originalMovie);
 
     return (
         <header

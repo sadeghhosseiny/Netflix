@@ -17,23 +17,59 @@
 }
 
 .largeRow {
-  max-height: 250px;
-  margin-right: 15px;
+  max-height: 360px;
+  width: 240px;
   transition: transform 0.3s;
   cursor: pointer;
+  object-fit: cover;
+  transform-origin: 120px 0px;
 }
 
 .largeRow:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 .movieImage {
-  max-height: 150px;
-  margin-right: 10px;
+  max-height: 360px;
+  width: 240px;
   transition: transform 0.3s;
   cursor: pointer;
+  object-fit: cover;
+  transform-origin: 120px 0px;
 }
 
 .movieImage:hover {
   transform: scale(1.1);
+}
+
+.imageAndButton {
+  display: grid;
+  justify-items: center;
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  width: 240px;
+  height: 360px;
+  margin-right: 20px;
+}
+
+.imageButton {
+  margin-right: 20px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background: #f4c3c6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.imageButton:hover {
+  background: #c73434;
+  color: #decece;
 }

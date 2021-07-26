@@ -20,7 +20,6 @@ function Navbar() {
 
     return (
         <div className={`${showBlavkNavbar ? styles.blackNav : styles.nav}`}>
-            {console.log(showBlavkNavbar)}
             <div className={styles.logoContainer}>
                 <img className={styles.netflixLogo}
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"

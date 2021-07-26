@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Button from '../../lib/button/Button';
 import Input from '../../lib/input/input';
 import Login from '../Login/Login';
@@ -20,15 +20,7 @@ function SignUp() {
     };
 
     const handleLoginUser = () => {
-        if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.com/i.userEmail) {
-
-            dispatch(setUser(userEmail));
-        }
-        else {
-            alert("asdg");
-        }
-
-
+        dispatch(setUser(userEmail));
     };
 
     return (
