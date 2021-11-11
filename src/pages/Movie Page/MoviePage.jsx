@@ -7,19 +7,11 @@ import MoviePagePoster from '../../components/movie page poster/MoviePagePoster'
 
 function MoviePage() {
 
-    const selector = useSelector(state => state.userReducer.moviePage);
-    console.log(selector);
-    // const overWriteUrl = () => {
-    //     const urlPath = window.location.pathname;
-    //     const res = urlPath.replace(/%20/gi, "-");
-    //     // setRes2(urlPath.replace(/%20/gi, " "));
+  const selector = useSelector(state => state.userReducer.moviePage);
 
-    //     // history.replace({ pathname: `${res}` });
-    // };
-
-    return (
-        <MoviePagePoster movieInfo={selector} />
-    );
+  return (
+    <MoviePagePoster movieInfo={selector} />
+  );
 }
 
 export default MoviePage;

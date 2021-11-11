@@ -1,0 +1,50 @@
+.largeRow {
+  max-height: 360px;
+  width: 240px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  object-fit: cover;
+  transform-origin: 120px 0px;
+}
+
+.largeRow:hover {
+  transform: scale(1.1);
+}
+
+.movieImage {
+  max-height: 360px;
+  width: 240px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  object-fit: cover;
+  transform-origin: 120px 0px;
+}
+
+.movieImage:hover {
+  transform: scale(1.1);
+}
+
+.imageButton {
+  margin-right: 20px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  background: #f4c3c6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  position: absolute;
+  top: 84%;
+  left: 22%;
+}
+
+.imageButton:hover {
+  background: #c73434;
+  color: #decece;
+}

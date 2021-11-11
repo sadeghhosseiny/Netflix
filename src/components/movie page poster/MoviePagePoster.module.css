@@ -1,10 +1,22 @@
-.mainContainer {
+.pageContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.posterContainer {
   position: relative;
+  display: flex;
+  width: 100%;
+  height: 50vw;
+  z-index: 1;
+}
+
+.poster {
+  position: absolute;
   object-fit: contain;
   width: 100%;
-  height: 820px;
-  min-width: 450px;
-  background-attachment: fixed;
+  height: 100%;
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
