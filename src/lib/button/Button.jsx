@@ -10,7 +10,7 @@ const Button = (props) => {
   console.log('SET', setIsAddedToList);
   // console.log('props button', props.isAddedToList);
   return (
-    <button type={type} onClick={onClick} className={className} >{title}</button>
+    <button title={title} type={type} onClick={onClick} className={className} >{props.children}</button>
   );
 };
 

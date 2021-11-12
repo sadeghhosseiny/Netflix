@@ -4,12 +4,19 @@ const initialState = {
   user: [],
   saveData: [],
   movieList: [],
-  allMovies: [],
+  allMovies: null,
   data: null
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case Type.ALL_MOVIES:
+      console.log('REDUCER all movies', state.allMovies);
+      console.log('ACTION.payload', action.payload);
+      return {
+        ...state,
+        allMovies: action.payload
+      };
     case Type.USER:
       return {
         ...state,
@@ -21,11 +28,7 @@ const reducer = (state = initialState, action) => {
         // ...state,
         movieList: [...state?.movieList, action.payload]
       };
-    case Type.ADD_MOVIE_TO_BASKET:
-      return {
-        ...state,
-        allMovies: action.payload
-      };
+
     case Type.MOVIE_PAGE:
       console.log('this is stateMOVIEpage', !!state?.data?.moviePage?.length);
       return {

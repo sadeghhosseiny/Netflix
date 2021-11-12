@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import Button from '../../lib/button/Button';
 import MovieImage from '../../lib/movie image/movieImage';
-import { addMovieToBaket, addToMyList, moviePage } from '../../Redux/actions/actions';
+import { addMovieToBaket, addToMyList, moviePage, setAllMovies } from '../../Redux/actions/actions';
 import axios from '../../services/axios/axios';
 import MovieBlock from '../MovieBlock/MovieBlock';
 import styles from './MovieRow.module.css';
@@ -21,6 +21,7 @@ function MovieRow({ item }) {
 
   useEffect(() => {
     fetchData();
+    setAllMovies(movies);
   }, [item.fetchUrl]);
 
 

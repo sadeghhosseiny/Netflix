@@ -25,12 +25,13 @@
 }
 
 .imageButton {
+  width: 23px;
+  height: 23px;
   margin-right: 20px;
   margin-top: 20px;
   outline: none;
   border: none;
   border-radius: 2px;
-  padding: 10px;
   background: #f4c3c6;
   font-size: 0.95rem;
   font-weight: 600;
@@ -40,11 +41,29 @@
   text-decoration-line: none;
   text-decoration-style: none;
   position: absolute;
-  top: 84%;
-  left: 22%;
+  top: -5%;
+  left: 1%;
 }
 
 .imageButton:hover {
   background: #c73434;
   color: #decece;
+}
+
+.plusBox {
+  font-size: 27px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 24px;
+  width: 17px;
+}
+
+.checkBox {
+  font-size: 27px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 24px;
+  width: 17px;
 }

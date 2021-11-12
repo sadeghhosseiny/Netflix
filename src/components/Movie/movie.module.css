@@ -1,0 +1,81 @@
+.movieContainer {
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  padding-top: 25px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.movieImageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  margin-right: 45px;
+  position: relative;
+}
+
+.movieImage {
+  max-width: 800px;
+  max-height: 500px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s linear;
+}
+
+.movieImage:hover {
+  opacity: 0.5;
+}
+
+.playBtn {
+  position: absolute;
+  top: 250px;
+  right: 130px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s linear;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.delBtn {
+  position: absolute;
+  top: 304px;
+  right: 78px;
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.3s linear;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.playBtn:hover {
+  background-color: darkslategray;
+  color: #c6c3c3;
+}
+
+.delBtn:hover {
+  background-color: darkslategray;
+  color: #c6c3c3;
+}
+
+.movieImageContainer:hover .playBtn {
+  opacity: 1;
+}
+
+.movieImageContainer:hover .delBtn {
+  opacity: 1;
+}

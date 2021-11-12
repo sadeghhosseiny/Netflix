@@ -45,9 +45,13 @@ function Banner() {
       <div className={styles.bannerContent}>
         <h1 className={styles.bannerTitle}>{originalMovie?.name}</h1>
         <div className={styles.buttonsDiv}>
-          <Button className={`${styles.button}`} title={"Play"} />
+          <Button className={`${styles.button}`}>
+            Play
+          </Button>
           <Link to="/List">
-            <Button className={`${styles.button}`} title={"My List"} />
+            <Button className={`${styles.button}`}>
+              My List
+            </Button>
           </Link>
         </div>
         <div className={styles.description}>
