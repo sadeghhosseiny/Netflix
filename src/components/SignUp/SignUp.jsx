@@ -23,12 +23,13 @@ function SignUp() {
 
   const handleLoginUser = () => {
     dispatch(setUser(userEmail));
-    history.push('/home');
+    if (userEmail.length > 5) {
+      history.push('/home');
+    }
   };
 
   return (
     <div className={styles.main}>
-      {/* <img src="https://assets.nflxext.com/ffe/siteui/vlv3/9c5457b8-9ab0-4a04-9fc1-e608d5670f1a/aad8cd4d-f4ac-49af-8539-25a81bf459d0/US-en-20210719-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" /> */}
       <div className={styles.signupScreen}>
         <div>
           <img className={styles.signupNavbarLogo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="" />
