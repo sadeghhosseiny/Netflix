@@ -6,11 +6,11 @@ import Movie from '../../components/Movie/movie';
 function UserMovieListPage() {
 
   const selector = useSelector(state => ({
-    movies: state?.userReducer?.movieList
+    movies: state?.addMovieToListReducer?.data
   }));
 
   return (
-    selector?.movies.map(movie => (
+    selector?.movies?.map(movie => (
       <Movie key={movie.id} movie={movie} />
     ))
   );

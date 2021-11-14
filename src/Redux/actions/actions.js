@@ -1,30 +1,36 @@
-import { Type } from "../action types/actionTypes";
+import { ACTION_TYPES } from "../action types/actionTypes";
 
-export const setAllMovies = (movies) => {
-  console.log('action%%%%%%%%%%%%%%%%%%%%%%%', movies);
-  return {
-    type: Type.ALL_MOVIES,
-    payload: movies
-  };
-};
+// export const setAllMovies = (movies) => {
+//   return {
+//     type: ACTION_TYPES.ALL_MOVIES.SUCCESS,
+//     payload: movies
+//   };
+// };
 
-export const setUser = (user) => {
-  return {
-    type: Type.USER,
-    payload: user
-  };
-};
+// export const setUser = (user) => {
+//   return {
+//     type: ACTION_TYPES.USER,
+//     payload: user
+//   };
+// };
 
 export const addToMyList = (movie) => {
   return {
-    type: Type.ADD_TO_MY_LIST,
+    type: ACTION_TYPES.ADD_TO_MY_LIST.SUCCESS,
     payload: movie
   };
 };
 
-export const moviePage = (movieInfo) => {
+// export const moviePage = (movieInfo) => {
+//   return {
+//     type: ACTION_TYPES.MOVIE_PAGE.SUCCESS,
+//     payload: movieInfo
+//   };
+// };
+
+export const removeMovieFromList = (movieId) => {
   return {
-    type: Type.MOVIE_PAGE,
-    payload: movieInfo
+    type: ACTION_TYPES.ADD_TO_MY_LIST.DELETE,
+    payload: movieId
   };
 };

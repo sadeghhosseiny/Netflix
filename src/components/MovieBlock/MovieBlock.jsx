@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -12,22 +12,23 @@ function MovieBlock({ movie }) {
   const [isAddedToList, setIsAddedToList] = useState(false);
   const dispatch = useDispatch();
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
-  const selector = useSelector(state => state?.userReducer?.movieList);
+  const selector = useSelector(state => state?.addMovieToListReducer?.data);
   let checkBool = false;
 
+  const checker = () => {
+    selector?.map(item => item.id == movie.id && (checkBool = true));
+    return checkBool;
+  };
+
   const handleAddToList = (movieData) => {
-    (!isAddedToList || !checkBool) && dispatch(addToMyList(movieData));
+    (!checker()) && dispatch(addToMyList(movieData));
     setIsAddedToList(true);
   };
 
-  const handleMoviePage = (movieData) => {
-    dispatch(moviePage(movieData));
-  };
+  // const handleMoviePage = (movieData) => {
+  //   dispatch(moviePage(movieData));
+  // };
 
-  const checker = () => {
-    selector.map(item => item.id == movie.id && (checkBool = true));
-    return checkBool;
-  };
 
   useEffect(() => {
     checker();
@@ -36,7 +37,7 @@ function MovieBlock({ movie }) {
   return (
     <div>
       <Link to={`${movie?.name ? movie?.name.replaceAll(' ', '-') : movie?.title.replaceAll(' ', '-')}`}>
-        <MovieImage onClick={() => handleMoviePage(movie)} className={`${movie.LargeRow ? styles.largeRow : styles.movieImage}`}
+        <MovieImage /*onClick={() => handleMoviePage(movie)}*/ className={`${movie.LargeRow ? styles.largeRow : styles.movieImage}`}
           imgsrc={`${image_BaseUrl}${movie?.poster_path}`} />
       </Link>
 
@@ -48,4 +49,4 @@ function MovieBlock({ movie }) {
   );
 }
 
-export default MovieBlock;
+export default memo(MovieBlock);

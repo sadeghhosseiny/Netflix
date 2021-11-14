@@ -18,6 +18,7 @@
   justify-content: end;
   margin-right: 45px;
   position: relative;
+  max-width: 360px;
 }
 
 .movieImage {
@@ -78,4 +79,9 @@
 
 .movieImageContainer:hover .delBtn {
   opacity: 1;
+}
+
+.pageContainer {
+  width: 100%;
+  background-color: black;
 }
