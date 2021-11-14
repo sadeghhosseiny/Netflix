@@ -81,7 +81,16 @@
   opacity: 1;
 }
 
-.pageContainer {
-  width: 100%;
-  background-color: black;
+.description > h1 {
+  font-family: "Black Ops One", cursive;
+}
+
+.description > p {
+  font-family: "Voltaire", sans-serif;
+  font-size: 20px;
+}
+
+.description > span {
+  font-family: "Voltaire", sans-serif;
+  font-size: 20px;
 }

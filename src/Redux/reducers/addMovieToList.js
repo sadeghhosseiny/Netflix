@@ -5,7 +5,7 @@ const initialState = {
   success: false,
   error: false,
   delete: false,
-  data: null
+  data: []
 };
 
 const addMovieToListReducer = (state = initialState, action) => {
