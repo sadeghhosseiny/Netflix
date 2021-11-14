@@ -7,12 +7,12 @@ import { ACTION_TYPES } from "../action types/actionTypes";
 //   };
 // };
 
-// export const setUser = (user) => {
-//   return {
-//     type: ACTION_TYPES.USER,
-//     payload: user
-//   };
-// };
+export const setUser = (user) => {
+  return {
+    type: ACTION_TYPES.USER.SUCCESS,
+    payload: user
+  };
+};
 
 export const addToMyList = (movie) => {
   return {

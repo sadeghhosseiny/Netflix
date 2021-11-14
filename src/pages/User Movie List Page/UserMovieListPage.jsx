@@ -12,7 +12,6 @@ function UserMovieListPage() {
 
   return (
     <>
-      {console.log('UMMMM', selector?.movies)}
       {selector?.movies.length ?
         selector?.movies.map(movie => (
           <Movie key={movie.id} movie={movie} />

@@ -18,30 +18,25 @@ function App() {
 
   return (
     <div className="App">
+      {console.log('USERRR ', user)}
       <Router>
-        {user == "" ? (
 
-          // <Route exact path="/">
-
-          <SignUpPage />
-          // </Route>
-        ) : (
-          <Suspense fallback={<div>Loading...</div>}>
-
-            <Switch>
-
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/List">
-                <UserMovieListPage />
-              </Route>
-              <Route path="/:movieName">
-                <MoviePage />
-              </Route>
-            </Switch>
-          </Suspense>
-        )}
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route exact path="/">
+              <SignUpPage />
+            </Route>
+            <Route exact path="/home">
+              <HomePage />
+            </Route>
+            <Route path="/list">
+              <UserMovieListPage />
+            </Route>
+            <Route path="/:movieName">
+              <MoviePage />
+            </Route>
+          </Switch>
+        </Suspense>
 
       </Router>
     </div>

@@ -14,13 +14,11 @@ function Movie({ movie }) {
   }));
 
   const removeMovie = () => {
-    console.log('this is movie ID -> ', movie?.id);
     dispatch(removeMovieFromList(movie?.id));
   };
 
   return (
     <div className={styles.movieContainer}>
-      {console.log('MOVOVOV', selector?.movies)}
       <div className={styles.description}>
         <h1>
           {movie?.name ? movie?.name : movie?.title}
