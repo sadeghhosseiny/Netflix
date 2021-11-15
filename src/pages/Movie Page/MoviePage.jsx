@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams, useRouteMatch } from 'react-router-dom';
 import MovieImage from '../../lib/movie image/movieImage';
 import { moviePage } from '../../Redux/actions/actions';
-import MoviePagePoster from '../../components/movie page poster/MoviePagePoster';
+import MoviePageInfo from '../../components/movie page poster/MoviePageInfo';
 
 function MoviePage() {
 
-  const selector = useSelector(state => state.userReducer.moviePage);
+  const selector = useSelector(state => state?.moviePageReducer?.movies);
 
   return (
-    <MoviePagePoster movieInfo={selector} />
+    <MoviePageInfo movieInfo={selector} />
   );
 }
 

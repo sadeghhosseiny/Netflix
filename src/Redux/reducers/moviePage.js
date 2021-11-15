@@ -4,25 +4,25 @@ const initialState = {
   requesting: false,
   success: false,
   error: false,
-  users: []
+  movies: null
 };
 
-const addUserReducer = (state = initialState, action) => {
+const moviePageReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ACTION_TYPES.USER.SUCCESS:
+    case ACTION_TYPES.MOVIE_PAGE.SUCCESS:
       return {
         requesting: false,
         success: true,
         error: false,
-        users: state?.users ? [...state.users, action.payload] : [{ ...action.payload }]
+        movies: { ...action?.payload }
       };
-    case ACTION_TYPES.USER.REQUESTING:
+    case ACTION_TYPES.MOVIE_PAGE.REQUESTING:
       return { requesting: true, success: false, error: false };
-    case ACTION_TYPES.USER.ERROR:
+    case ACTION_TYPES.MOVIE_PAGE.ERROR:
       return { requesting: false, success: false, error: true };
     default:
       return state;
   }
 };
 
-export default addUserReducer;
+export default moviePageReducer;

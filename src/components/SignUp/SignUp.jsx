@@ -22,7 +22,6 @@ function SignUp() {
   };
 
   const handleLoginUser = () => {
-    dispatch(setUser(userEmail));
     if (userEmail.length > 5) {
       history.push('/home');
     }

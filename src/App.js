@@ -12,21 +12,16 @@ const MoviePage = lazy(() => import('./pages/Movie Page/MoviePage'));
 
 function App() {
 
-  //const selector = useSelector(state => state.userReducer.user);
-
-  const user = localStorage.getItem('user');
 
   return (
     <div className="App">
-      {console.log('USERRR ', user)}
       <Router>
-
         <Suspense fallback={<div>Loading...</div>}>
           <Switch>
             <Route exact path="/">
               <SignUpPage />
             </Route>
-            <Route exact path="/home">
+            <Route path="/home">
               <HomePage />
             </Route>
             <Route path="/list">

@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import { reducer } from '../reducers/allMovies';
 import addMovieToListReducer from "../reducers/addMovieToList";
-import addUserReducer from "../reducers/addUser";
+import moviePageReducer from "../reducers/moviePage";
 
 export const rootReducer = combineReducers({
   // reducer,
   addMovieToListReducer,
-  addUserReducer
+  moviePageReducer
 });

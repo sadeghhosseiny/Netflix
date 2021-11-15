@@ -18,10 +18,6 @@ export const ACTION_TYPES = {
     ERROR: 'MOVIE_PAGE_ERROR'
   },
 
-  USER: {
-    REQUESTING: 'USER_REQUESTING',
-    SUCCESS: 'USER_SUCCESS',
-    ERROR: 'USER_ERROR'
-  }
+
 
 };;

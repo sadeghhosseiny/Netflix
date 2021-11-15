@@ -25,9 +25,9 @@ function MovieBlock({ movie }) {
     setIsAddedToList(true);
   };
 
-  // const handleMoviePage = (movieData) => {
-  //   dispatch(moviePage(movieData));
-  // };
+  const handleMoviePage = (movieData) => {
+    dispatch(moviePage(movieData));
+  };
 
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function MovieBlock({ movie }) {
   return (
     <div>
       <Link to={`${movie?.name ? movie?.name.replaceAll(' ', '-') : movie?.title.replaceAll(' ', '-')}`}>
-        <MovieImage /*onClick={() => handleMoviePage(movie)}*/ className={`${movie.LargeRow ? styles.largeRow : styles.movieImage}`}
+        <MovieImage onClick={() => handleMoviePage(movie)} className={`${movie.LargeRow ? styles.largeRow : styles.movieImage}`}
           imgsrc={`${image_BaseUrl}${movie?.poster_path}`} />
       </Link>
 
