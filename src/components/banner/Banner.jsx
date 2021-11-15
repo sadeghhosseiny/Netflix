@@ -32,7 +32,6 @@ function Banner() {
 
   };
 
-  console.log(originalMovie);
 
   return (
     <header

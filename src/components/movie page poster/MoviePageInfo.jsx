@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useWindowSize } from '../../hook/windowSize';
 import MovieImage from '../../lib/movie image/movieImage';
 import { truncate } from '../../lib/truncate/truncate';
 import styles from './MoviePageInfo.module.css';
@@ -6,6 +7,9 @@ import styles from './MoviePageInfo.module.css';
 function MoviePageInfo(props) {
   const movie = props.movieInfo;
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
+
+  const [width, height] = useWindowSize();
+
   return (
     <section className={styles.pageContainer}>
       <div className={styles.movieContainer}>
@@ -30,8 +34,10 @@ function MoviePageInfo(props) {
             {movie?.vote_count}</span>
         </div>
         <div className={styles.posterContainer}>
-          <div className={styles.poster} style={{
+          <div className={styles.poster} style={width >= 601 ? {
             backgroundImage: `url(${image_BaseUrl}${movie.backdrop_path})`
+          } : {
+            backgroundImage: `url(${image_BaseUrl}${movie.poster_path})`
           }} >
           </div>
         </div>
