@@ -8,22 +8,33 @@ function MoviePageInfo(props) {
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
   return (
     <section className={styles.pageContainer}>
-      <div className={styles.posterContainer}>
-        <div className={styles.poster} style={{
-          backgroundImage: `url(${image_BaseUrl}${movie.backdrop_path})`
-        }} >
+      <div className={styles.movieContainer}>
+        <div className={styles.description}>
+          <h1>
+            {movie?.name ? movie?.name : movie?.title}
+          </h1>
+          <span>
+            <span>
+              {movie?.release_date?.slice(0, -6)}</span>
+          </span>
+          <div>
+            <p>{truncate(movie?.overview, 250)}</p>
+          </div>
+          <span>
+            <span>
+              Score :&nbsp;&nbsp;
+            </span>
+            {movie?.vote_average}</span>
+          <span>
+            <span>Number of viewers :&nbsp; </span>
+            {movie?.vote_count}</span>
         </div>
-      </div>
-      <div className={styles.description}>
-        <h1>
-          {movie?.name ? movie?.name : movie?.title}
-        </h1>
-        <div>
-          <p>{truncate(movie?.overview, 250)}</p>
+        <div className={styles.posterContainer}>
+          <div className={styles.poster} style={{
+            backgroundImage: `url(${image_BaseUrl}${movie.backdrop_path})`
+          }} >
+          </div>
         </div>
-        <span>{movie?.release_date}</span>
-        <span>Score : {movie?.vote_average}</span>
-        <span>Number of viewers : {movie?.vote_count}</span>
       </div>
     </section>
   );
