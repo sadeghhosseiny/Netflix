@@ -4,6 +4,7 @@ import Button from '../../lib/button/Button';
 import MovieImage from '../../lib/movie image/movieImage';
 import { truncate } from '../../lib/truncate/truncate';
 import styles from './MoviePageInfo.module.css';
+import logo from '../../n1.png';
 
 function MoviePageInfo(props) {
   const movie = props.movieInfo;
@@ -49,6 +50,15 @@ function MoviePageInfo(props) {
           } : {
             backgroundImage: `url(${image_BaseUrl}${movie.poster_path})`
           }} >
+          </div>
+        </div>
+        <div className={styles.footer}>
+          <div>
+            <div>
+              <img src={logo} alt="logo" />
+              <p>Watch all you want.</p>
+            </div>
+            <Button>JOIN NOW</Button>
           </div>
         </div>
       </div>
