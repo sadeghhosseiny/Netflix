@@ -52,15 +52,27 @@ function MoviePageInfo(props) {
           }} >
           </div>
         </div>
-        <div className={styles.footer}>
-          <div>
-            <div>
-              <img src={logo} alt="logo" />
-              <p>Watch all you want.</p>
+        {
+          width >= 601 ?
+            <div className={styles.footer}>
+              <div>
+                <div>
+                  <img className={styles.footerLogo} src={logo} alt="logo" />
+                  <p>Watch all you want.</p>
+                </div>
+                <Button className={styles.joinBtn}>JOIN NOW</Button>
+              </div>
+            </div> :
+            <div className={styles.footer}>
+              <div>
+                <img className={styles.footerLogo} src={logo} alt="logo" />
+                <div className={styles.mobileContent}>
+                  <p>Watch all you want.</p>
+                  <Button className={styles.joinBtn}>JOIN NOW</Button>
+                </div>
+              </div>
             </div>
-            <Button>JOIN NOW</Button>
-          </div>
-        </div>
+        }
       </div>
     </section>
   );

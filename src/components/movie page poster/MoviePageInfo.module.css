@@ -178,6 +178,7 @@
 
   .posterContainer {
     height: 140vw;
+    order: 3;
   }
 
   .poster {
@@ -192,6 +193,27 @@
     padding-left: 20px;
     left: unset;
     width: unset;
+    order: 2;
+  }
+
+  .footer {
+    order: 1;
+    position: relative !important;
+    right: unset !important;
+    margin-left: 20px;
+    height: 100px !important;
+  }
+
+  .footerLogo {
+    width: 100px !important;
+  }
+
+  .footer > div {
+    justify-content: unset !important;
+  }
+
+  .footer > div > div > p {
+    margin-top: -5px;
   }
 
   .poster::after {
@@ -215,9 +237,19 @@
   .posterContainer {
     height: 907px;
   }
+
+  .footer {
+    right: unset !important;
+    width: 100% !important;
+    max-width: 1720px !important;
+  }
+
+  .footer > div {
+    margin-left: 150px;
+  }
 }
 
-.footer > div > div > img {
+.footerLogo {
   width: 65px;
   height: auto;
 }
@@ -225,10 +257,11 @@
 .footer {
   z-index: 5;
   position: absolute;
-  width: 100%;
+  width: 89%;
   top: 90%;
   height: 80px;
-  max-width: 1830px;
+  max-width: 1580px;
+  right: 2%;
 }
 
 .footer > div {
@@ -236,8 +269,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 87px;
-  margin-left: 170px;
   background-image: linear-gradient(to right, #333 5%, #181818 95%);
 }
 
@@ -252,7 +283,7 @@
   font-weight: 700;
 }
 
-.footer > div > button {
+.joinBtn {
   outline: none;
   padding: 9px 20px;
   color: #fff;
@@ -262,4 +293,11 @@
   line-height: 17px;
   margin-right: 25px;
   border: none;
+}
+
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  height: 66px;
+  justify-content: space-between;
 }
