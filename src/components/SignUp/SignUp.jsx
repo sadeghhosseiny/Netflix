@@ -21,8 +21,9 @@ function SignUp() {
     setUserEmail(e.target.value);
   };
 
-  const handleLoginUser = () => {
-    if (userEmail.length > 5) {
+  const handleLoginUser = (e) => {
+    e.preventDefault();
+    if (userEmail.length > 5 & userEmail.includes('@gmail.com')) {
       history.push('/home');
     }
   };

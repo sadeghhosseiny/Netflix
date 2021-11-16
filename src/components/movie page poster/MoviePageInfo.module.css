@@ -1,6 +1,53 @@
 .pageContainer {
   width: 100%;
+  background-color: #181818;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navBar > img {
+  width: 110px;
+  height: auto;
+  padding: 15px;
+  margin-left: 15px;
+}
+
+.navBar > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.navBar > div > button {
+  outline: none;
+  padding: 9px 20px;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.navBar > div > button:nth-child(1) {
+  background-color: #e50914;
+  line-height: 17px;
+  margin-right: 10px;
+  border: none;
+}
+
+.navBar > div > button:nth-child(2) {
+  border: 1px solid #888;
   background-color: black;
+}
+
+.navBar > div > button:nth-child(1):hover {
+  background-color: #f40612;
+}
+
+.navBar > div > button:nth-child(2):hover {
+  background-color: rgba(150, 150, 150, 0.3);
 }
 
 .posterContainer {
@@ -15,11 +62,12 @@
 .poster {
   position: absolute;
   object-fit: contain;
-  width: 96%;
+  width: 91%;
   height: 100%;
   background-position-x: center;
   background-position-y: center;
   background-size: cover;
+  left: 9%;
 }
 
 .description {
@@ -32,9 +80,28 @@
   font-size: 20px;
   flex-direction: column;
   z-index: 2;
-  padding-left: 90px;
-  /* background: linear-gradient(90deg, black, transparent); */
-  background: linear-gradient(to right, black 40%, transparent);
+  left: 9%;
+  width: 510px;
+  background: linear-gradient(
+    to right,
+    #181818 10%,
+    rgba(23, 23, 23, 0.98) 20%,
+    rgba(23, 23, 23, 0.97) 25%,
+    rgba(23, 23, 23, 0.95) 35%,
+    rgba(23, 23, 23, 0.94) 40%,
+    rgba(23, 23, 23, 0.92) 45%,
+    rgba(23, 23, 23, 0.9) 50%,
+    rgba(23, 23, 23, 0.87) 55%,
+    rgba(23, 23, 23, 0.82) 60%,
+    rgba(23, 23, 23, 0.75) 65%,
+    rgba(23, 23, 23, 0.63) 70%,
+    rgba(23, 23, 23, 0.45) 75%,
+    rgba(23, 23, 23, 0.27) 80%,
+    rgba(23, 23, 23, 0.15) 85%,
+    rgba(23, 23, 23, 0.08) 90%,
+    rgba(23, 23, 23, 0.03) 95%,
+    rgba(23, 23, 23, 0) 100%
+  );
 }
 
 .description > div {
@@ -86,12 +153,15 @@
   .poster {
     height: 100%;
     width: 100%;
+    left: unset;
   }
 
   .description {
     height: 100%;
     position: inherit;
     padding-left: 20px;
+    left: unset;
+    width: unset;
   }
 
   .poster::after {
@@ -99,6 +169,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, black, 15%, transparent);
+    background: linear-gradient(to top, #181818, 15%, transparent);
+  }
+}
+
+@media (min-width: 1780px) {
+  .poster {
+    height: 885px;
+    width: 1600px;
+  }
+  .description {
+    height: 885px;
   }
 }
