@@ -3,6 +3,7 @@
   color: aliceblue;
   display: flex;
   padding-top: 25px;
+  justify-content: space-between;
 }
 
 .description {

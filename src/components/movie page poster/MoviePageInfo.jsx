@@ -15,9 +15,13 @@ function MoviePageInfo(props) {
   return (
     <section className={styles.pageContainer}>
       <div className={styles.navBar}>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
-          alt="netflix logo" />
+        {
+          width >= 601 ?
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
+              alt="netflix logo" /> :
+            <img className={styles.navBarLogo} src={logo} alt="NetflixLogo" />
+        }
         <div>
           <Button>JOIN NOW</Button>
           <Button>SIGN IN</Button>

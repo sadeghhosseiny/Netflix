@@ -295,9 +295,19 @@
   border: none;
 }
 
+.joinBtn:hover {
+  background-color: #f40612;
+}
+
 .mobileContent {
   display: flex;
   flex-direction: column;
   height: 66px;
   justify-content: space-between;
+}
+
+.navBarLogo {
+  width: 80px !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
