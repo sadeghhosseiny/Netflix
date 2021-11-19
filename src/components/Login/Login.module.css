@@ -126,3 +126,10 @@
     padding: 100px 30px;
   }
 }
+
+form > span {
+  margin-top: -40px;
+  margin-right: auto;
+  margin-left: 5px;
+  color: #a73d48;
+}

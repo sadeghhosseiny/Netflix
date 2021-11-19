@@ -8,6 +8,7 @@ import styles from './SignUp.module.css';
 function SignUp() {
   const dispatch = useDispatch();
   const [userEmail, setUserEmail] = useState("");
+  const [isClickedOnSingup, setIsClickedOnSingup] = useState(false);
   const history = useHistory();
 
   const handleLogin = () => {
@@ -16,11 +17,19 @@ function SignUp() {
 
   const handleSetUser = (e) => {
     setUserEmail(e.target.value);
+    if (isClickedOnSingup) {
+      if (userEmail.includes('@gmail')) {
+        setIsClickedOnSingup(false);
+      }
+    }
   };
 
   const handleLoginUser = (e) => {
     e.preventDefault();
-    if (userEmail.length > 5 & userEmail.includes('@gmail')) {
+    if (!!!userEmail.includes('@gmail')) {
+      setIsClickedOnSingup(true);
+    }
+    if (userEmail.includes('@gmail')) {
       history.push('/home');
     }
   };
@@ -47,6 +56,9 @@ function SignUp() {
                   Get Started
                 </Button>
               </form>
+              {isClickedOnSingup &&
+                <span>your email is not valid</span>
+              }
             </div>
           </>
         </div>

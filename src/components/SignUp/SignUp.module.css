@@ -126,3 +126,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.divInpt > span {
+  display: flex;
+  max-width: 690px;
+  justify-content: center;
+}

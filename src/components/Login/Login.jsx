@@ -9,27 +9,53 @@ function Login() {
 
   const history = useHistory();
   const [infoOfLogin, setInfoOfLogin] = useState({});
+  const [isClickedOnSignIn, setIsClickedOnSignIn] = useState({
+    email: false,
+    pass: false
+  });
 
   const handleGetInfo = (e) => {
     const { name, value } = e.target;
     setInfoOfLogin({
       ...infoOfLogin, [name]: value
     });
+    if (isClickedOnSignIn.email || isClickedOnSignIn.pass) {
+      if (infoOfLogin?.email?.includes('@gmail')) {
+        setIsClickedOnSignIn({
+          ...isClickedOnSignIn, email: false
+        });
+      }
+      if (infoOfLogin?.password?.length > 5) {
+        setIsClickedOnSignIn({
+          ...isClickedOnSignIn, pass: false
+        });
+      }
+    }
   };
 
-  const [isClickedOnSignIn, setIsClickedOnSignIn] = useState(false);
 
   const handleSignIn = (e) => {
     e.preventDefault();
-    setIsClickedOnSignIn(true);
+
+    if (infoOfLogin?.password?.length < 6) {
+      setIsClickedOnSignIn(prev => ({
+        ...prev, pass: true
+      }));
+    }
+    if (!!!(infoOfLogin?.email?.includes('@gmail'))) {
+      setIsClickedOnSignIn(prev => ({
+        ...prev, email: true
+      }));
+    }
+
     if (infoOfLogin?.password?.length >= 6 && infoOfLogin?.email?.includes('@gmail')) {
-      setIsClickedOnSignIn(false);
       history.push("/home");
     }
   };
 
   return (
     <div className={styles.main}>
+      {console.log(isClickedOnSignIn)}
       <div className={styles.signupScreen}>
         <div className={styles.signinScreen_gradient} />
         <div className={styles.signinScreen_body}>
@@ -37,15 +63,15 @@ function Login() {
             <form>
               <h1>Sign In</h1>
               <Input name="email" onChange={handleGetInfo} type="email" placeholder="Email" />
-              {isClickedOnSignIn &&
+              {isClickedOnSignIn.email &&
                 <span>
                   your email is not valid
                 </span>
               }
               <Input name="password" onChange={handleGetInfo} type="password" placeholder="Password" />
-              {isClickedOnSignIn &&
+              {isClickedOnSignIn.pass &&
                 <span>
-                  your password is not valid
+                  your password must greater than 6 characters
                 </span>
               }
               <Button onClick={handleSignIn} type="submit" >
