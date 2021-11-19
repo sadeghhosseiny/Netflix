@@ -1,6 +1,6 @@
 .movieContainer {
-  background-color: black;
-  color: aliceblue;
+  background-color: #181818;
+  color: #fff;
   display: flex;
   padding-top: 25px;
   justify-content: space-between;
@@ -62,6 +62,27 @@
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .movieImage {
+    opacity: 0.5;
+  }
+  .delBtn {
+    opacity: 1;
+  }
+  .playBtn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .movieContainer {
+    justify-content: center;
+  }
+  .movieImageContainer {
+    margin-right: 0;
+  }
 }
 
 .playBtn:hover {

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import Banner from '../../components/banner/Banner';
-import MovieRow from '../../components/movie row/MovieRow';
+import MovieRow from '../../components/movieRow/MovieRow';
 import Navbar from '../../components/navbar/Navbar';
 import { fetchData } from '../../services/get_movies/allMovies';
 import requests from '../../services/requests/requests';

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useWindowSize } from '../../hook/windowSize';
 import Button from '../../lib/button/Button';
-import MovieImage from '../../lib/movie image/movieImage';
+import MovieImage from '../../lib/movieImage/movieImage';
 import { truncate } from '../../lib/truncate/truncate';
 import styles from './MoviePageInfo.module.css';
 import logo from '../../n1.png';

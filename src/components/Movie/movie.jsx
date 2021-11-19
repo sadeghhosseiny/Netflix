@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useWindowSize } from '../../hook/windowSize';
 import Button from '../../lib/button/Button';
-import MovieImage from '../../lib/movie image/movieImage';
+import MovieImage from '../../lib/movieImage/movieImage';
 import { removeMovieFromList } from '../../Redux/actions/actions';
 import styles from './movie.module.css';
 
 function Movie({ movie }) {
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
   const dispatch = useDispatch();
+  const [width, height] = useWindowSize();
 
   const selector = useSelector(state => ({
     movies: state?.addMovieToListReducer?.data
@@ -19,21 +21,23 @@ function Movie({ movie }) {
 
   return (
     <div className={styles.movieContainer}>
-      <div className={styles.description}>
-        <h1>
-          {movie?.name ? movie?.name : movie?.title}
-        </h1>
-        <p>
-          {movie?.overview}
-        </p>
-        <br />
-        <span>
-          {movie?.release_date}
-        </span>
-        <span>
-          {`Original language: ${movie?.original_language}`}
-        </span>
-      </div>
+      {width >= 700 &&
+        <div className={styles.description}>
+          <h1>
+            {movie?.name ? movie?.name : movie?.title}
+          </h1>
+          <p>
+            {movie?.overview}
+          </p>
+          <br />
+          <span>
+            {movie?.release_date}
+          </span>
+          <span>
+            {`Original language: ${movie?.original_language}`}
+          </span>
+        </div>
+      }
       <div className={styles.movieImageContainer}>
         <MovieImage className={styles.movieImage} imgsrc={`${image_BaseUrl}${movie?.poster_path}`} />
         <Button className={styles.playBtn}>Play</Button>

@@ -1,16 +1,3 @@
-.largeRow {
-  max-height: 360px;
-  width: 240px;
-  transition: transform 0.3s;
-  cursor: pointer;
-  object-fit: cover;
-  transform-origin: 120px 0px;
-}
-
-.largeRow:hover {
-  transform: scale(1.1);
-}
-
 .movieImage {
   max-height: 360px;
   width: 240px;
