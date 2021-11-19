@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 // import MoviePage from './pages/Movie Page/MoviePage';
 import UserMovieListPage from './pages/User Movie List Page/UserMovieListPage';
 import { lazy, Suspense } from 'react';
+import LogIn from './pages/logIn/logIn';
 
 const HomePage = lazy(() => import('./pages/Home Page/HomePage'));
 const MoviePage = lazy(() => import('./pages/Movie Page/MoviePage'));
@@ -20,6 +21,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <SignUpPage />
+            </Route>
+            <Route path="/logIn">
+              <LogIn />
             </Route>
             <Route path="/home">
               <HomePage />
