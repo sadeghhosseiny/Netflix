@@ -1,5 +1,6 @@
 .wholePage {
   background-color: #000;
+  color: #fff;
 }
 
 .main {
@@ -138,13 +139,14 @@
   justify-content: center;
 }
 
-.animationDiv {
+/*//////////////////////////////////////////////////////////////////*/
+
+.enjoyTvAnimation {
   padding: 70px 45px;
-  color: #fff;
   border-bottom: 8px solid #222;
 }
 
-.content {
+.contentOfEnjoyTvAnimation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,25 +154,25 @@
   max-width: 1100px;
 }
 
-.content > div {
+.contentOfEnjoyTvAnimation > div {
   padding: 0 3rem 0 0;
   width: 52%;
 }
 
-.content > div > h1 {
+.contentOfEnjoyTvAnimation > div > h1 {
   font-size: 3.125rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 
-.content > div > h2 {
+.contentOfEnjoyTvAnimation > div > h2 {
   font-size: 1.625rem;
   font-weight: 400;
 }
 
 .tvAndVideo {
   position: relative;
-  margin: -5% -7% -5% 0;
+  margin: -5% -4% -5% 0;
   overflow: hidden;
 }
 
@@ -196,4 +198,88 @@
 .videoContainer > video {
   width: 100%;
   height: 100%;
+}
+
+.downloadMovieAnimation {
+  padding: 70px 45px;
+  position: relative;
+  border-bottom: 8px solid #222;
+}
+
+.contentOfDownloadMovieAnimation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.picturesContainer {
+  width: 48%;
+  height: 100%;
+  position: relative;
+}
+
+.picturesContainer > img {
+  width: 100%;
+  height: 100%;
+}
+
+.picturesContainer > div {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: #000;
+  display: flex;
+  align-items: center;
+  width: 65%;
+  min-width: 15em;
+  padding: 0.25em 0.65em;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.75em;
+}
+
+.picturesContainer > div > div {
+  margin: 0 1rem 0 0;
+}
+
+.picturesContainer > div > div > img {
+  max-width: 100%;
+  height: 4.5rem;
+}
+
+.contentOfBorder {
+  display: flex;
+  flex-grow: 1;
+}
+
+.contentOfBorder > div {
+  flex-grow: 1;
+}
+
+.contentOfBorder > div > p:nth-child(1) {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.contentOfBorder > div > p:nth-child(2) {
+  color: #0071eb;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.contentOfBorder::after {
+  content: "";
+  width: 3em;
+  height: 3em;
+  display: block;
+  background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif)
+    center center no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100%;
+  background-size: 100%;
 }

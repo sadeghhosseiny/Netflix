@@ -65,8 +65,8 @@ function SignUp() {
           </div>
         </div>
       </div>
-      <div className={styles.animationDiv}>
-        <div className={styles.content}>
+      <div className={styles.enjoyTvAnimation}>
+        <div className={styles.contentOfEnjoyTvAnimation}>
           <div>
             <h1>Enjoy on your TV.</h1>
             <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h2>
@@ -80,6 +80,32 @@ function SignUp() {
                 <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
               </video>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.downloadMovieAnimation}>
+        <div className={styles.contentOfDownloadMovieAnimation}>
+          <div className={styles.picturesContainer}>
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="" />
+            <div>
+              <div>
+                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="" />
+              </div>
+              <div className={styles.contentOfBorder}>
+                <div>
+                  <p>Stranger Things</p>
+                  <p>Downloading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1>
+              Download your shows to watch offline.
+            </h1>
+            <h2>
+              Save your favorites easily and always have something to watch.
+            </h2>
           </div>
         </div>
       </div>
