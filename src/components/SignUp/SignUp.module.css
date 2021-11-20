@@ -215,9 +215,10 @@
 }
 
 .picturesContainer {
-  width: 48%;
+  width: 45%;
   height: 100%;
   position: relative;
+  margin: -5% 0px -1% -6%;
 }
 
 .picturesContainer > img {
@@ -229,9 +230,6 @@
   position: absolute;
   left: 50%;
   bottom: 7%;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
   transform: translateX(-50%);
   margin: 0 auto;
   background: #000;
@@ -282,4 +280,21 @@
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100%;
   background-size: 100%;
+}
+
+.textsOfDownloadMovies {
+  padding: 0 0 0 3rem;
+  width: 52%;
+  height: 100%;
+}
+
+.textsOfDownloadMovies > h1 {
+  font-size: 3.125rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.textsOfDownloadMovies > h2 {
+  font-size: 1.625rem;
+  font-weight: 400;
 }

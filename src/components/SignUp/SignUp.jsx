@@ -99,7 +99,7 @@ function SignUp() {
               </div>
             </div>
           </div>
-          <div>
+          <div className={styles.textsOfDownloadMovies}>
             <h1>
               Download your shows to watch offline.
             </h1>
