@@ -35,32 +35,52 @@ function SignUp() {
   };
 
   return (
-    <div className={styles.main}>
-      <div className={styles.signupScreen}>
-        <div>
-          <img className={styles.signupNavbarLogo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="" />
-          <Button onClick={handleLogin} className={styles.signupNavbarBtn}>
-            Sign In
-          </Button>
+    <div className={styles.wholePage}>
+      <div className={styles.main}>
+        <div className={styles.signupScreen}>
+          <div>
+            <img className={styles.signupNavbarLogo} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png" alt="" />
+            <Button onClick={handleLogin} className={styles.signupNavbarBtn}>
+              Sign In
+            </Button>
+          </div>
+          <div className={styles.signupScreen_gradient} />
+          <div className={styles.signupScreen_body}>
+            <>
+              <h1>Unlimited movies, TV shows, and more.</h1>
+              <h2>Watch anywhere. Cancel anytime.</h2>
+              <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+              <div className={styles.divInpt}>
+                <form>
+                  <Input onChange={handleSetUser} className={styles.signupInput} type="email" placeholder="Email address" />
+                  <Button type="submit" onClick={handleLoginUser} className={styles.signupBtn} >
+                    Get Started
+                  </Button>
+                </form>
+                {isClickedOnSingup &&
+                  <span>your email is not valid</span>
+                }
+              </div>
+            </>
+          </div>
         </div>
-        <div className={styles.signupScreen_gradient} />
-        <div className={styles.signupScreen_body}>
-          <>
-            <h1>Unlimited movies, TV shows, and more.</h1>
-            <h2>Watch anywhere. Cancel anytime.</h2>
-            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-            <div className={styles.divInpt}>
-              <form>
-                <Input onChange={handleSetUser} className={styles.signupInput} type="email" placeholder="Email address" />
-                <Button type="submit" onClick={handleLoginUser} className={styles.signupBtn} >
-                  Get Started
-                </Button>
-              </form>
-              {isClickedOnSingup &&
-                <span>your email is not valid</span>
-              }
+      </div>
+      <div className={styles.animationDiv}>
+        <div className={styles.content}>
+          <div>
+            <h1>Enjoy on your TV.</h1>
+            <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h2>
+          </div>
+          <div className={styles.tvAndVideo}>
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              data-uia="our-story-card-img" />
+            <div className={styles.videoContainer}>
+              <video autoPlay playsInline muted loop __idm_id__="1251393537">
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
+              </video>
             </div>
-          </>
+          </div>
         </div>
       </div>
     </div>
