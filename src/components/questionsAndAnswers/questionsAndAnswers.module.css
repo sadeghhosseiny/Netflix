@@ -31,7 +31,7 @@
 .trPlus {
   position: absolute;
   top: -10px;
-  right: 0.5rem;
+  right: 0.75rem;
   font-size: 3.625rem;
   font-weight: 100;
   transform: rotate(45deg);

@@ -46,13 +46,7 @@
 
 @media (max-width: 740px) {
   .signupNavbarLogo {
-    position: absolute;
-    width: 165px;
-    height: 70px;
-    object-fit: contain;
-    top: 3px;
     margin-left: 15px;
-    z-index: 2;
   }
 }
 
@@ -137,4 +131,69 @@
   display: flex;
   max-width: 690px;
   justify-content: center;
+}
+
+@media (max-width: 1550px) {
+  .signupScreen > div > img {
+    width: 125px;
+    height: 65px;
+  }
+  .signupScreen_body > h1 {
+    font-size: 3.125rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .signupScreen > div > img {
+    width: 115px;
+  }
+
+  .signupScreen_body > h2 {
+    margin-bottom: 15px;
+  }
+
+  .divInpt > form {
+    display: unset !important;
+  }
+
+  .divInpt > form > input {
+    display: block;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .signupBtn {
+    display: block;
+    margin: auto;
+  }
+
+  .signupScreen_gradient {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+}
+
+@media (max-width: 550px) {
+  .signupScreen_body > h1 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+  .signupScreen_body > h2 {
+    font-size: 1.125rem;
+    margin: 1rem auto;
+  }
+  .signupScreen > div > img {
+    width: 90px;
+    height: 60px;
+  }
+  .signupNavbarBtn {
+    padding: 4px 12px;
+  }
 }
