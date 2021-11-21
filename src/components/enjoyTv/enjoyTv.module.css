@@ -79,3 +79,12 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 550px) {
+  .contentOfEnjoyTvAnimation > div > h1 {
+    font-size: 1.625rem;
+  }
+  .contentOfEnjoyTvAnimation > div > h2 {
+    font-size: 1.125rem;
+  }
+}
