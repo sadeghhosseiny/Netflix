@@ -1,0 +1,140 @@
+.wholePage {
+  background-color: #000;
+  color: #fff;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-bottom: 8px solid #222;
+}
+
+.signupScreen {
+  width: 100%;
+  height: 710px;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_small.jpg")
+    no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  color: #fff;
+  min-height: 550px;
+}
+
+.signupScreen_gradient {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.signupNavbarLogo {
+  position: absolute;
+  width: 180px;
+  height: 80px;
+  object-fit: contain;
+  top: 10px;
+  margin-left: 50px;
+}
+
+@media (max-width: 740px) {
+  .signupNavbarLogo {
+    position: absolute;
+    width: 165px;
+    height: 70px;
+    object-fit: contain;
+    top: 3px;
+    margin-left: 15px;
+    z-index: 2;
+  }
+}
+
+.signupNavbarBtn {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  margin-right: 55px;
+  outline: none;
+  border: none;
+  background-color: #e50914;
+  padding: 7px 17px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signupScreen_body {
+  text-align: center;
+  max-width: 950px;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  right: 0%;
+}
+
+.signupScreen_body > h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.signupScreen_body > h2 {
+  font-size: 1.625rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.signupScreen_body > h3 {
+  font-size: 1.2rem;
+  padding-bottom: 20px;
+  font-weight: 400;
+}
+
+.divInpt {
+  height: 60px;
+}
+
+.divInpt > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.divInpt > form > input {
+  padding: 10px;
+  height: 30px;
+  width: 30%;
+  max-width: 600px;
+  outline-width: 0;
+  border: none;
+}
+
+.signupBtn {
+  font-size: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.divInpt > span {
+  display: flex;
+  max-width: 690px;
+  justify-content: center;
+}

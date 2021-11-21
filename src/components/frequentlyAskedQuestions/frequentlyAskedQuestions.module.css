@@ -1,0 +1,22 @@
+.fAndqDiv {
+  position: relative;
+  padding: 70px 45px;
+  border-bottom: 8px solid #222;
+  background-color: #000;
+  color: #fff;
+  transition: all 0.2s linear;
+}
+
+.contentOfFAndqDiv {
+  font-size: 1.625rem;
+  text-align: center;
+  transition: all 0.2s linear;
+}
+
+.listsContainer {
+  list-style: none;
+  width: 75%;
+  margin: 2em auto;
+  max-width: 815px;
+  transition: all 0.2s linear;
+}
