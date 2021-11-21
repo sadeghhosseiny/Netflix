@@ -44,3 +44,36 @@
   font-size: 1.625rem;
   font-weight: 400;
 }
+
+@media (max-width: 950px) {
+  .cotentOfChildrenProfileDiv {
+    flex-direction: column-reverse;
+  }
+  .textsOfChildrenProfileDiv {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .pictureContainer {
+    width: 100%;
+    max-width: 600px;
+  }
+  .textsOfChildrenProfileDiv > h1 {
+    font-size: 2.5rem;
+  }
+
+  .textsOfChildrenProfileDiv > h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .textsOfChildrenProfileDiv > h1 {
+    font-size: 1.625rem;
+  }
+
+  .textsOfChildrenProfileDiv > h2 {
+    font-size: 1.125rem;
+  }
+}
