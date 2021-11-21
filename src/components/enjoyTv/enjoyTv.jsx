@@ -5,7 +5,7 @@ function EnjoyTv() {
   return (
     <div className={styles.enjoyTvAnimation}>
       <div className={styles.contentOfEnjoyTvAnimation}>
-        <div>
+        <div className={styles.textsOfEnjoyTvAnimation}>
           <h1>Enjoy on your TV.</h1>
           <h2>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h2>
         </div>
