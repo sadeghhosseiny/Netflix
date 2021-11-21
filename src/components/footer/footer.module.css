@@ -1,0 +1,45 @@
+.footerContainer {
+  padding: 70px 45px 70px 45px;
+  background-color: #000;
+  color: #757575;
+  position: relative;
+  margin: 0 auto;
+}
+
+.content {
+  min-width: 190px;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1em;
+  color: #757575;
+  position: relative;
+}
+
+.content > p {
+  padding: 0;
+  max-width: 1000px;
+  margin: 0px auto 30px auto;
+}
+
+.content > p > span {
+  cursor: pointer;
+}
+
+.content > p > span:hover {
+  text-decoration: underline;
+}
+
+.content > div {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content > div > ul {
+  padding: 0;
+  margin: 0;
+  max-width: 1000px;
+  font-size: 13px;
+}
