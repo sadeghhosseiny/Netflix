@@ -20,3 +20,22 @@
   max-width: 815px;
   transition: all 0.2s linear;
 }
+
+@media (max-width: 950px) {
+  .contentOfFAndqDiv > h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .contentOfFAndqDiv > h1 {
+    font-size: 1.625rem;
+  }
+  .listsContainer {
+    width: 100%;
+    padding: 0;
+  }
+  .fAndqDiv {
+    padding: 70px 0px;
+  }
+}

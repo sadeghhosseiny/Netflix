@@ -15,7 +15,7 @@ function QuestionsAndAnswers({ item }) {
       <button>{item?.question}</button>
       <span className={`${wr ? styles.trPlus : styles.flPlus}`}>+</span>
       <div className={`${wr ? styles.trueCondition : styles.falseCondition}`}>
-        <span>
+        <span className={styles.answers}>
           {item?.answer}
         </span>
       </div>

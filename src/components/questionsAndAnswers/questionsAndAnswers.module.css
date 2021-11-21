@@ -57,3 +57,30 @@
   display: inline-block;
   padding: 1.2em;
 }
+
+@media (max-width: 950px) {
+  .list > button {
+    font-size: 1.25rem;
+  }
+  .answers {
+    font-size: 1.25rem;
+  }
+  .flPlus {
+    top: -5px;
+    font-size: 2.625rem;
+  }
+
+  .trPlus {
+    top: -5px;
+    font-size: 2.625rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .answers {
+    font-size: 1.125rem;
+  }
+  .list > button {
+    font-size: 1.125rem;
+  }
+}
