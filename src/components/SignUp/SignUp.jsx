@@ -74,7 +74,7 @@ function SignUp() {
           <div className={styles.tvAndVideo}>
             <img
               src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
-              data-uia="our-story-card-img" />
+            />
             <div className={styles.videoContainer}>
               <video autoPlay playsInline muted loop __idm_id__="1251393537">
                 <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
@@ -106,6 +106,38 @@ function SignUp() {
             <h2>
               Save your favorites easily and always have something to watch.
             </h2>
+          </div>
+        </div>
+      </div>
+      <div className={styles.watchEverywhereDiv}>
+        <div className={styles.contentOfWatchEverywhere}>
+          <div>
+            <h1>Watch everywhere.</h1>
+            <h2>Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.</h2>
+          </div>
+          <div className={styles.tvAndPictureOfWatchEverywhere}>
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+            />
+            <div className={styles.videoContainer}>
+              <video autoPlay playsInline muted loop __idm_id__="1251393538">
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div>
+            <img src="https://occ-0-64-58.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABdFTpLmANuJpYneLq8L5m7CunMCi8e8Nl4y7xaPVWzG3IeoDoq17egTQAthApKg_4sdRWdwuR8KadWu1frjL3JQImpwq.png?r=fcd" alt="" />
+          </div>
+          <div>
+            <div></div>
+          </div>
+          <div>
+            <h1>Create profiles for children.</h1>
+            <h2>Send children on adventures with their favourite characters in a space made just for them – free with your membership.</h2>
           </div>
         </div>
       </div>
