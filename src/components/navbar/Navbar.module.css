@@ -32,6 +32,7 @@
   height: 30px;
   z-index: 1;
   transition: 0.5s;
+  min-width: 460px;
 }
 
 .blackNav {

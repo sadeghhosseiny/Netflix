@@ -51,9 +51,12 @@ function HomePage() {
     <>
       <Navbar />
       <Banner />
-      {
-        AllMovies.map((item, i) => <MovieRow key={i} item={item} />)
-      }
+      <div style={{ minWidth: "460px" }}>
+        {
+
+          AllMovies.map((item, i) => <MovieRow key={i} item={item} />)
+        }
+      </div>
 
     </>
   );

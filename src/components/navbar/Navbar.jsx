@@ -26,7 +26,6 @@ function Navbar() {
           alt="netflix logo" />
         <img className={styles.avatarLogo}
           src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="avatar logo" />
-        {/* src="https://pbs.twimg.com/profile_images/1240119990411550720/hBEe3tdn_400*400.png" */}
       </div>
     </div>
   );
