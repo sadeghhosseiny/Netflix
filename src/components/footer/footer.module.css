@@ -1,9 +1,10 @@
 .footerContainer {
-  padding: 70px 45px 70px 45px;
+  padding: 70px 0px 70px 130px;
   background-color: #000;
   color: #757575;
   position: relative;
   margin: 0 auto;
+  /* min-width: 250px; */
 }
 
 .content {
@@ -42,4 +43,10 @@
   margin: 0;
   max-width: 1000px;
   font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .footerContainer {
+    padding: 70px 0px 70px 70px;
+  }
 }

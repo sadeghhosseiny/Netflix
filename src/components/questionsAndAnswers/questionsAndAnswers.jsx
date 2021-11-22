@@ -10,7 +10,7 @@ function QuestionsAndAnswers({ item }) {
   // attention: between html tags should be empty
 
   return (
-    <li className={styles.list} onClick={() => setWr(!wr)}>
+    <li className={styles.listItem} onClick={() => setWr(!wr)}>
       {console.log('item ', item?.br?.type)}
       <button>{item?.question}</button>
       <span className={`${wr ? styles.trPlus : styles.flPlus}`}>+</span>

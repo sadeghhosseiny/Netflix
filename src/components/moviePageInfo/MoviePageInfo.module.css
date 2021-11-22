@@ -58,6 +58,7 @@
   height: 50vw;
   z-index: 1;
   justify-content: end;
+  min-height: 500px;
 }
 
 .poster {

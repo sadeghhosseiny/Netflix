@@ -1,11 +1,11 @@
-.list {
+.listItem {
   list-style-type: none;
   margin: 0 0 8px 0;
   cursor: pointer;
   position: relative;
 }
 
-.list > button {
+.listItem > button {
   padding: 0.8em 2.2em 0.8em 1.2em;
   margin-bottom: 1px;
   font-weight: 400;
@@ -53,13 +53,13 @@
   transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
 }
 
-.list > div > span {
+.listItem > div > span {
   display: inline-block;
   padding: 1.2em;
 }
 
 @media (max-width: 950px) {
-  .list > button {
+  .listItem > button {
     font-size: 1.25rem;
   }
   .answers {
@@ -80,7 +80,7 @@
   .answers {
     font-size: 1.125rem;
   }
-  .list > button {
+  .listItem > button {
     font-size: 1.125rem;
   }
 }

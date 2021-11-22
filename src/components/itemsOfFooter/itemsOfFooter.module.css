@@ -1,4 +1,4 @@
-.list {
+.listItem {
   list-style: none;
   margin-left: 0;
   box-sizing: border-box;
@@ -11,10 +11,22 @@
   vertical-align: top;
 }
 
-.list > a {
+.listItem > a {
   cursor: pointer;
 }
 
-.list > a:hover {
+.listItem > a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .listItem {
+    width: 33%;
+  }
+}
+
+@media (max-width: 500px) {
+  .listItem {
+    width: 50%;
+  }
 }

@@ -18,7 +18,7 @@ function NavbarAndHeader() {
   const handleSetUser = (e) => {
     setUserEmail(e.target.value);
     if (isClickedOnSingup) {
-      if (userEmail.includes('@gmail')) {
+      if (e.target.value.includes('@gmail')) {
         setIsClickedOnSingup(false);
       }
     }
@@ -44,6 +44,7 @@ function NavbarAndHeader() {
               Sign In
             </Button>
           </div>
+          <img src="https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_small.jpg" srcSet="https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_small.jpg 1000w, https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_medium.jpg 1500w, https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_large.jpg 1800w" alt="" />
           <div className={styles.signupScreen_gradient} />
           <div className={styles.signupScreen_body}>
             <>

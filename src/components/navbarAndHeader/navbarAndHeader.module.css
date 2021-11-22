@@ -1,6 +1,7 @@
 .wholePage {
   background-color: #000;
   color: #fff;
+  min-width: 255px;
 }
 
 .main {
@@ -10,22 +11,17 @@
   border-bottom: 8px solid #222;
 }
 
-.signupScreen {
+.signupScreen > img {
   width: 100%;
   height: 710px;
-  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/5dd45df7-33f1-4274-97ea-e9c6aca69dad/3e5f9ac0-92d5-4f01-9378-ce9d307f20ed/SG-en-20211108-popsignuptwoweeks-perspective_alpha_website_small.jpg")
-    no-repeat;
-  background-position: center;
-  background-size: cover;
   object-fit: cover;
-  color: #fff;
-  min-height: 550px;
 }
 
 .signupScreen_gradient {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   background: rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(
     to top,
@@ -42,6 +38,7 @@
   object-fit: contain;
   top: 10px;
   margin-left: 50px;
+  z-index: 2;
 }
 
 @media (max-width: 740px) {
@@ -63,6 +60,7 @@
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .signupScreen_body {
@@ -136,7 +134,7 @@
 @media (max-width: 1550px) {
   .signupScreen > div > img {
     width: 125px;
-    height: 65px;
+    height: 75px;
   }
   .signupScreen_body > h1 {
     font-size: 3.125rem;
