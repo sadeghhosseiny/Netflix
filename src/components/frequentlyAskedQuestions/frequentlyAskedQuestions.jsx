@@ -31,8 +31,9 @@ function FrequentlyAskedQuestions() {
     },
   ];
 
-  const _questionsAndAnswers = questionsAndAnswers.map((item, i) =>
+  const _questionsAndAnswers = questionsAndAnswers.map((item, i) => (
     <QuestionsAndAnswers key={i} item={item} />
+  )
   );
 
   return (

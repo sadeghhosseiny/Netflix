@@ -40,9 +40,8 @@ function Banner() {
           `url(https://image.tmdb.org/t/p/original${(originalMovie === undefined || originalMovie?.backdrop_path === null) ? DataUndefinedHandler() : originalMovie?.backdrop_path})`,
       }}
       className={styles.header}>
-
       <div className={styles.bannerContent}>
-        <h1 className={styles.bannerTitle}>{originalMovie?.name}</h1>
+        <h1 className={styles.bannerTitle}>{originalMovie ? originalMovie?.name : "Loading..."}</h1>
         <div className={styles.buttonsDiv}>
           <Button className={`${styles.button}`}>
             Play
@@ -54,7 +53,7 @@ function Banner() {
           </Link>
         </div>
         <div className={styles.description}>
-          {truncate(`${originalMovie?.overview}`, 150)}
+          {originalMovie?.overview === undefined ? "Loading...." : truncate(`${originalMovie?.overview}`, 150)}
         </div>
       </div>
       <div className={styles.fadeBottom} />

@@ -37,7 +37,7 @@ function Login() {
   const handleSignIn = (e) => {
     e.preventDefault();
 
-    if (infoOfLogin?.password?.length < 6) {
+    if (infoOfLogin?.password?.length < 6 || !(infoOfLogin?.password)) {
       setIsClickedOnSignIn(prev => ({
         ...prev, pass: true
       }));
@@ -48,7 +48,7 @@ function Login() {
       }));
     }
 
-    if (infoOfLogin?.password?.length >= 6 && infoOfLogin?.email?.includes('@gmail')) {
+    if (infoOfLogin?.password?.length > 6 && infoOfLogin?.email?.includes('@gmail')) {
       history.push("/home");
     }
   };

@@ -13,9 +13,11 @@
 
 .listItem > a {
   cursor: pointer;
+  color: #757575;
+  text-decoration: auto;
 }
 
-.listItem > a:hover {
+.listItem > a > span:hover {
   text-decoration: underline;
 }
 
