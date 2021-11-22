@@ -25,7 +25,7 @@ const addMovieToListReducer = (state = initialState, action) => {
         delete: true,
         ...state?.data,
         data:
-          state?.data?.filter(item => item.id != action.payload)
+          state?.data?.filter(item => item.id !== action.payload)
       };
     case ACTION_TYPES.ADD_TO_MY_LIST.REQUESTING:
       return { requesting: true, success: false, error: false };

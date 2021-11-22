@@ -1,15 +1,17 @@
 import './App.css';
 // import HomePage from './pages/Home Page/HomePage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import SignUpPage from './pages/signUpPage/SignUpPage';
-import { useSelector } from 'react-redux';
+// import SignUpPage from './pages/signUpPage/SignUpPage';
 // import MoviePage from './pages/Movie Page/MoviePage';
-import UserMovieListPage from './pages/userMovieListPage/UserMovieListPage';
+// import UserMovieListPage from './pages/userMovieListPage/UserMovieListPage';
+// import LogIn from './pages/logIn/logIn';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import LogIn from './pages/logIn/logIn';
 
 const HomePage = lazy(() => import('./pages/homePage/HomePage'));
 const MoviePage = lazy(() => import('./pages/moviePage/MoviePage'));
+const UserMovieListPage = lazy(() => import('./pages/userMovieListPage/UserMovieListPage'));
+const SignUpPage = lazy(() => import('./pages/signUpPage/SignUpPage'));
+const LogIn = lazy(() => import('./pages/logIn/logIn'));
 
 function App() {
 

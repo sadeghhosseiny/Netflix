@@ -11,7 +11,7 @@ function EnjoyTv() {
         </div>
         <div className={styles.tvAndVideo}>
           <img
-            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt=""
           />
           <div className={styles.videoContainerOfEnjoyTv}>
             <video autoPlay playsInline muted loop __idm_id__="1251393537">

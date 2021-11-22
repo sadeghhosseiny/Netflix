@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useWindowSize } from '../../hook/windowSize';
 import Button from '../../lib/button/Button';
 import MovieImage from '../../lib/movieImage/movieImage';
@@ -9,11 +9,7 @@ import styles from './movie.module.css';
 function Movie({ movie }) {
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
   const dispatch = useDispatch();
-  const [width, height] = useWindowSize();
-
-  const selector = useSelector(state => ({
-    movies: state?.addMovieToListReducer?.data
-  }));
+  const [width] = useWindowSize();
 
   const removeMovie = () => {
     dispatch(removeMovieFromList(movie?.id));

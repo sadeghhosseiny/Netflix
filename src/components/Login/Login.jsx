@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../lib/button/Button';
 import Input from '../../lib/input/input';
@@ -55,7 +55,6 @@ function Login() {
 
   return (
     <div className={styles.main}>
-      {console.log(isClickedOnSignIn)}
       <div className={styles.signupScreen}>
         <div className={styles.signinScreen_gradient} />
         <div className={styles.signinScreen_body}>

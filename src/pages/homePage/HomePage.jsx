@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import React from 'react';
 import Banner from '../../components/banner/Banner';
 import MovieRow from '../../components/movieRow/MovieRow';
 import Navbar from '../../components/navbar/Navbar';
-import { fetchData } from '../../services/get_movies/allMovies';
 import requests from '../../services/requests/requests';
 
 function HomePage() {
-  const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(setAllMovies());
-  // }, []);
 
   const AllMovies = [
     {
@@ -53,7 +46,6 @@ function HomePage() {
       <Banner />
       <div style={{ minWidth: "460px" }}>
         {
-
           AllMovies.map((item, i) => <MovieRow key={i} item={item} />)
         }
       </div>

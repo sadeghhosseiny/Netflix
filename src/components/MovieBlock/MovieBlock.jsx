@@ -16,7 +16,7 @@ function MovieBlock({ movie }) {
   let checkBool = false;
 
   const checker = () => {
-    selector?.map(item => item.id == movie.id && (checkBool = true));
+    selector?.map(item => item.id === movie.id && (checkBool = true));
     return checkBool;
   };
 
@@ -28,7 +28,6 @@ function MovieBlock({ movie }) {
   const handleMoviePage = (movieData) => {
     dispatch(moviePage(movieData));
   };
-
 
   useEffect(() => {
     checker();

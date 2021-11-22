@@ -1,12 +1,5 @@
 import { ACTION_TYPES } from "../action types/actionTypes";
 
-// export const setAllMovies = (movies) => {
-//   return {
-//     type: ACTION_TYPES.ALL_MOVIES.SUCCESS,
-//     payload: movies
-//   };
-// };
-
 export const addToMyList = (movie) => {
   return {
     type: ACTION_TYPES.ADD_TO_MY_LIST.SUCCESS,

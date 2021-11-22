@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useWindowSize } from '../../hook/windowSize';
 import Button from '../../lib/button/Button';
-import MovieImage from '../../lib/movieImage/movieImage';
 import { truncate } from '../../lib/truncate/truncate';
 import styles from './MoviePageInfo.module.css';
 import logo from '../../n1.png';
@@ -12,7 +11,7 @@ function MoviePageInfo(props) {
   const image_BaseUrl = "https://image.tmdb.org/t/p/original";
   const history = useHistory();
 
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
 
   return (
     <section className={styles.pageContainer}>

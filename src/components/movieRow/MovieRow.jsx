@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, useHistory } from 'react-router-dom';
-import Button from '../../lib/button/Button';
-import MovieImage from '../../lib/movieImage/movieImage';
-import { addToMyList, moviePage } from '../../Redux/actions/actions';
 import axios from '../../services/axios/axios';
 import MovieBlock from '../MovieBlock/MovieBlock';
 import styles from './MovieRow.module.css';
 
 function MovieRow({ item }) {
-  const history = useHistory();
-  const dispatch = useDispatch();
   const [movies, setMovies] = useState([]);
 
   const fetchData = async () => {
@@ -20,7 +13,7 @@ function MovieRow({ item }) {
 
   useEffect(() => {
     fetchData();
-  }, [item.fetchUrl]);
+  }, [item?.fetchUrl]);
 
 
   return (
@@ -34,7 +27,6 @@ function MovieRow({ item }) {
               <MovieBlock movie={movie} />
             </div>
           </div>
-
         ))}
       </div>
     </div>

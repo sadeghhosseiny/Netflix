@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams, useRouteMatch } from 'react-router-dom';
-import MovieImage from '../../lib/movieImage/movieImage';
-import { moviePage } from '../../Redux/actions/actions';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import MoviePageInfo from '../../components/moviePageInfo/MoviePageInfo';
 
 function MoviePage() {

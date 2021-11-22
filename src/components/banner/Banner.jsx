@@ -37,7 +37,7 @@ function Banner() {
     <header
       style={{
         backgroundImage:
-          `url(https://image.tmdb.org/t/p/original${(originalMovie === undefined || originalMovie.backdrop_path === null) ? DataUndefinedHandler() : originalMovie?.backdrop_path})`,
+          `url(https://image.tmdb.org/t/p/original${(originalMovie === undefined || originalMovie?.backdrop_path === null) ? DataUndefinedHandler() : originalMovie?.backdrop_path})`,
       }}
       className={styles.header}>
 

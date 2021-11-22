@@ -11,7 +11,7 @@ function WatchEverywhere() {
         </div>
         <div className={styles.tvAndPictureOfWatchEverywhere}>
           <img
-            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt=""
           />
           <div className={styles.videoContainer}>
             <video autoPlay playsInline muted loop __idm_id__="1251393538">
