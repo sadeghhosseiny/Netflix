@@ -15,7 +15,6 @@ function MovieRow({ item }) {
     fetchData();
   }, [item?.fetchUrl]);
 
-
   return (
     <div className={styles.movieContainer}>
       <h1>{item.title}</h1>

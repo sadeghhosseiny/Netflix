@@ -1,7 +1,7 @@
 import './App.css';
-// import HomePage from './pages/Home Page/HomePage';
+// import HomePage from './pages/homePage/HomePage';
 // import SignUpPage from './pages/signUpPage/SignUpPage';
-// import MoviePage from './pages/Movie Page/MoviePage';
+// import MoviePage from './pages/moviePage/MoviePage';
 // import UserMovieListPage from './pages/userMovieListPage/UserMovieListPage';
 // import LogIn from './pages/logIn/logIn';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -38,7 +38,6 @@ function App() {
             </Route>
           </Switch>
         </Suspense>
-
       </Router>
     </div>
   );
