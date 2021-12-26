@@ -15,7 +15,6 @@ function QuestionsAndAnswers({ item }) {
       <span className={`${showAnswer ? styles.trPlus : styles.flPlus}`}>+</span>
       <div className={`${showAnswer ? styles.trueCondition : styles.falseCondition}`}>
         <span dangerouslySetInnerHTML={{ __html: item?.answer }} className={styles.answers}>
-          {/* {item?.answer} */}
         </span>
       </div>
     </li>
