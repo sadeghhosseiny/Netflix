@@ -1,7 +1,7 @@
 
 NOTE: connect with VPN
 
-******************LIVE DEMO https://netflix-delta-rust.vercel.app/ **********************
+******************LIVE https://netflix-delta-rust.vercel.app/ **********************
 
 
 # Getting Started with Create React App
